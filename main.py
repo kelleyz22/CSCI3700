@@ -30,9 +30,9 @@ def update_basket_a():
 def unique_fruits():
     cursor, connection = util.connect_to_db(username, password, host, port, database)
     try:
-        cursor.execute("SELECT DISTINCT fruit FROM basket_a")
+        cursor.execute("SELECT DISTINCT fruit_a FROM basket_a")
         unique_a = cursor.fetchall()
-        cursor.execute("SELECT DISTINCT fruit FROM basket_b")
+        cursor.execute("SELECT DISTINCT fruit_b FROM basket_b")
         unique_b = cursor.fetchall()
 
         sql_table = unique_a + unique_b
