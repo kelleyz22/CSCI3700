@@ -25,7 +25,7 @@ def update_basket_a():
     finally:
         util.disconnect_from_db(connection, cursor)
 
-# Route to display unique fruits in basket_a and basket_b
+# Route is used to display unique fruits in basket_a and basket_b
 @app.route('/api/unique')
 def unique_fruits():
     cursor, connection = util.connect_to_db(username, password, host, port, database)
