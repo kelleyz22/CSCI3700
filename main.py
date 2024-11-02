@@ -35,8 +35,8 @@ def unique_fruits():
         cursor.execute("SELECT DISTINCT fruit_b FROM basket_b")
         unique_b = cursor.fetchall()
 
+	table_title = ["Unique Fruits in Basket A", "Unique Fruits in Basket B"]
         sql_table = unique_a + unique_b
-        table_title = ["Unique Fruits in Basket A", "Unique Fruits in Basket B"]
 
         return render_template('index.html', sql_table=sql_table, table_title=table_title)
     except Error as e:
